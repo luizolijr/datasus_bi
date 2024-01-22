@@ -20,12 +20,12 @@ library(read.dbc)
 df<-read.dbc(path_dbc)  
 head(df)
 
-4 - Salvar em csv:  
+4 - Salvar em csv  
 load_path<-"C:/REPOS/data_sus/data_dbc/RDRJ2301.dbc"  
 export_path<-"C:/REPOS/data_sus/data_csv/RDRJ2301.csv"  
 write.csv2(df, export_path)
 
-5 - Transformar em grande escala - dbc em csv:  
+5 - Transformar em grande escala - dbc em csv  
 Lê a pasta de arquivos dbc com um FOR, transforma um por um em csv e vai guardando na pasta de arquivos csv  
 dbc_folder <- "C:/REPOS/data_sus/data_dbc/"  
 csv_folder <- "C:/REPOS/data_sus/data_csv/"  
@@ -40,7 +40,7 @@ for(f in files) {
 # Tratamento dos Dados
 Descobrimos que grande parte dos dados vinham em códigos, sendo assim, precisamos da documentação para tratar os dados, uma das fontes de consulta foi este [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema-de-informacoes-hospitalares-do-sus-sihsus/documentacao/).
 
-1 - Tratamento da coluna "SEXO"
+1 - Tratamento da coluna "SEXO"  
 Através dos dados que encontramos sobre a coluna, que só tinha dado numérico, vimos que Masculino = 1, Feminino = 2 ou 3 e o resto seria ignorado.
 
 2 - Tratamento da coluna "DIAG_PRINC", referente ao diagnóstico principal.  
