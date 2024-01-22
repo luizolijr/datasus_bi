@@ -46,4 +46,4 @@ Através dos dados que encontramos sobre a coluna, que só tinha dado numérico, vi
 2 - Tratamento da coluna "DIAG_PRINC", referente ao diagnóstico principal.  
 Seguindo o mesmo [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema-de-informacoes-hospitalares-do-sus-sihsus/documentacao/), achamos as informações necessárias para tratar os dados. Vimos que era necessário fazer o download de tabelas auxiliares para interpretar os códigos, nesse caso utilizamos as [tabela capítulos](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/cid10_tabela_capitulos.csv) e [tabela subcategoria](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/CID-10-SUBCATEGORIAS.CSV.utf8) para gerar duas colunas, fazendo left join com os dados existentes, vide código em "datasus_bronze.ipynb".
 
-3 - Após o restante dos tratamentos, podemos escolher como separar os dados. A escolha foi um arquivo único com ambos os períodos escolhidos e com as colunas selecionadas para a análise.
+3 - Após o restante dos tratamentos, podemos escolher como separar os dados. A escolha foi um arquivo único com ambos períodos e colunas selecionados para a análise.
