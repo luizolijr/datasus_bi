@@ -8,8 +8,7 @@ Os dados podem ser extraídos manualmente através do site do [TabWin](https://dat
 # Conversão dos dados .DBC para .CSV utilizando R no Windows
 !! Atenção: substituir caminhos de arquivo pelos seus !!  
 
-1 - Baixar a biblioteca read.dbc (baixei a mais recente)  
-https://cran.r-project.org/src/contrib/Archive/read.dbc/
+1 - Baixar a biblioteca [read.dbc](https://cran.r-project.org/src/contrib/Archive/read.dbc/) (baixei a mais recente)  
 
 2 - Instalar a biblioteca  
 path<-"C:/read.dbc_1.0.6.tar.gz"  
