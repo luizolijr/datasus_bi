@@ -40,10 +40,13 @@ for(f in files) {
 # Tratamento dos Dados
 Descobrimos que grande parte dos dados vinham em códigos, sendo assim, precisamos da documentação para tratar os dados, uma das fontes de consulta foi este [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema-de-informacoes-hospitalares-do-sus-sihsus/documentacao/).
 
+
+
 1 - Tratamento da coluna "SEXO"  
 Através dos dados que encontramos sobre a coluna, que só tinha dado numérico, vimos que Masculino = 1, Feminino = 2 ou 3 e o resto seria ignorado.
 
-2 - Tratamento da coluna "DIAG_PRINC", referente ao diagnóstico principal.  
-Seguindo o mesmo [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema-de-informacoes-hospitalares-do-sus-sihsus/documentacao/), achamos as informações necessárias para tratar os dados. Vimos que era necessário fazer o download de tabelas auxiliares para interpretar os códigos, nesse caso utilizamos as [tabela capítulos](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/cid10_tabela_capitulos.csv) e [tabela subcategoria](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/CID-10-SUBCATEGORIAS.CSV.utf8) para gerar duas colunas, fazendo left join com os dados existentes, vide código em "datasus_bronze.ipynb".
+2 - Tratamento da coluna "DIAG_PRINC", referente ao diagnóstico principal.
+Seguindo o mesmo [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema-de-informacoes-hospitalares-do-sus-sihsus/documentacao/), achamos as informações necessárias para tratar os dados. Vimos que era necessário fazer o download de tabelas auxiliares para interpretar os códigos, nesse caso utilizamos as [tabela capítulos](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/cid10_tabela_capitulos.csv) e [tabela subcategoria](https://github.com/bigdata-icict/ETL-Dataiku-DSS/blob/master/SIM/CID-10-SUBCATEGORIAS.CSV.utf8) para gerar duas colunas, fazendo left join com os dados existentes, vide código em "datasus_bronze.ipynb".  
+Informações: A codificação do CID, presente na coluna "DIAG_PRINC", é alfanumérica e envolve uma letra e 4 números. Cada condição de saúde é atribuída a um código específico para facilitar a identificação. [Dicionário CID](https://www.medicinanet.com.br/cid10/b.htm)  
 
 3 - Após o restante dos tratamentos, podemos escolher como separar os dados. A escolha foi um arquivo único com ambos períodos e colunas selecionados para a análise.
