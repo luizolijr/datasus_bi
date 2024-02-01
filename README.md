@@ -1,5 +1,7 @@
 # Análise dos dados de internação do DATASUS
 
+![image](https://github.com/luizolijr/datasus_bi/assets/42130256/4aeeed0b-9dce-4502-ab68-107bfb28ee63)
+
 Este é um projeto de análise de dados com Power BI. O projeto é apresentado no BI, mas nas fases de obtenção e tratamento dos dados brutos fez-se necessário uso de Python e R.
 
 Dados: consulta do banco de dados do Sistema de Informações Hospitalares do SUS (SIHSUS) do DATASUS. Abrangendo as internações hospitalares realizadas no âmbito do Sistema Único de Saúde no estado do Rio de Janeiro, em dois períodos diferentes: Janeiro de 2012 a Setembro de 2013 e Janeiro de 2022 a Setembro de 2023.
@@ -64,7 +66,7 @@ Informações: A codificação do CID, presente na coluna "DIAG_PRINC", é alfanuméri
 Valores como caxumba teve pouco aumento e tuberculose um aumento de mais de 15%.   
 Hepatite caiu e não teve caso de internação por sarampo, mas se o gráfico mostra que parece ter tido uma queda em outras doenças, se a gente aplica o filtro de idade, são pessoas mais velhas que estão sendo internadas.  
 O vírus pode estar circulando pelas crianças que não estão sendo vacinadas e que vivem em contato com essas pessoas mais velhas.   
-Ao longo do tempo, se isso tiver certo tb a média de internação vai cair mais, em compensação, o aumento de tuberculose é sério e pode estar associado ainda a complicações da covid, cuja taxa de vacinação é baixa.
+Ao longo do tempo, se isso tiver certo tb a média de internação vai cair mais, em compensação, o aumento de tuberculose é sério e pode estar associado ainda a complicações da covid, cuja taxa de vacinação é baixa.  
 
 O projeto chegou a algumas análises interessantes, mas ainda há muito para explorar. Como só foi utilizado dados de internação, muito provavelmente diversos casos sem complicações suficientes para tal estão em outra base de dados.
 Em uma futura exploração, com mais dados, dá pra ter um melhor entendimento sobre as hipóteses em mente.
