@@ -2,6 +2,13 @@
 
 Este é um projeto de análise de dados com Power BI. O projeto é apresentado no BI, mas nas fases de obtenção e tratamento dos dados brutos fez-se necessário uso de Python e R.
 
+Dados: consulta do banco de dados do Sistema de Informações Hospitalares do SUS (SIHSUS) do DATASUS. Abrangendo as internações hospitalares realizadas no âmbito do Sistema Único de Saúde no estado do Rio de Janeiro, em dois períodos diferentes: Janeiro de 2012 a Setembro de 2013 e Janeiro de 2022 a Setembro de 2023.
+
+Queríamos saber se aumentou o número de doenças que já haviam sido extintas por conta da imunização mas que com a baixa da cobertura poderiam estar voltando, tem um movimento no mundo de baixa de cobertura que pode ter sido agravada com movimento anti vacina, pós covid, disseminação de fake news e se acompanhava um movimento de queda que está acontecendo ao redor do mundo desde 2014 segundo os dados do IPEA.  
+
+Hipotese: com a queda da cobertura pelo SUS, pelo pouco número de pessoas se vacinando algumas doenças que já foram exterminadas estariam voltando, doenças como caxumba, hepatite, tuberculose e sarampo
+
+
 # Obtenção dos dados via FTP do datasus
 Os dados podem ser extraídos manualmente através do site do [TabWin](https://datasus.saude.gov.br/transferencia-de-arquivos/), selecionando SIHSUS e o período desejado, mas como precisavamos de um período extenso, utilizamos funções para extração dos dados de forma mais eficiente, vide código em "coleta_dados.ipynb".
 
@@ -50,3 +57,14 @@ Seguindo o mesmo [link](https://pcdas.icict.fiocruz.br/conjunto-de-dados/sistema
 Informações: A codificação do CID, presente na coluna "DIAG_PRINC", é alfanumérica e envolve uma letra e 4 números. Cada condição de saúde é atribuída a um código específico para facilitar a identificação. [Dicionário CID](https://www.medicinanet.com.br/cid10/b.htm)  
 
 3 - Após o restante dos tratamentos, podemos escolher como separar os dados. A escolha foi um arquivo único com ambos períodos e colunas selecionados para a análise.
+
+
+# Conclusão
+
+Valores como caxumba teve pouco aumento e tuberculose um aumento de mais de 15%.   
+Hepatite caiu e não teve caso de internação por sarampo, mas se o gráfico mostra que parece ter tido uma queda em outras doenças, se a gente aplica o filtro de idade, são pessoas mais velhas que estão sendo internadas.  
+O vírus pode estar circulando pelas crianças que não estão sendo vacinadas e que vivem em contato com essas pessoas mais velhas.   
+Ao longo do tempo, se isso tiver certo tb a média de internação vai cair mais, em compensação, o aumento de tuberculose é sério e pode estar associado ainda a complicações da covid, cuja taxa de vacinação é baixa.
+
+O projeto chegou a algumas análises interessantes, mas ainda há muito para explorar. Como só foi utilizado dados de internação, muito provavelmente diversos casos sem complicações suficientes para tal estão em outra base de dados.
+Em uma futura exploração, com mais dados, dá pra ter um melhor entendimento sobre as hipóteses em mente.
